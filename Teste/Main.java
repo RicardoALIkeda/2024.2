@@ -3,7 +3,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        int[] chaves = new int[500];
+        int[] chaves = new int[2000];
         preencherComNumerosAleatorios(chaves);
         bubbleSort(chaves);
         // Adicione qualquer outra lógica que você precise aqui

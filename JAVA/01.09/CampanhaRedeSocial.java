@@ -13,12 +13,16 @@ public class CampanhaRedeSocial extends Campanha {
     this.compartilhamentos = compartilhamentos;
     this.comentarios = comentarios;
 }
+    @Override
     public void configurar(){
         System.out.println("Configurando campanha de rede social.");
-    }
+    }   
+    
+    @Override
     public void executar(){
         System.out.println("Configurando campanha de rede social.");
     }
+    @Override
     public void avaliar(){
         System.out.println("Configurando avaliar de rede social.");
     }

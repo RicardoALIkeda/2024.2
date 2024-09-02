@@ -4,15 +4,17 @@
  */
 public class Main {
     public static void main(String[] args) {
-        Campanha campanhaRedeSocial= new CampanhaRedeSocial(1,2,3);
-
+        System.out.println("_____________________________________");
+        Campanha campanhaRedeSocial= new CampanhaRedeSocial(23,10,13);
         campanhaRedeSocial.configurar();
         campanhaRedeSocial.executar();
         campanhaRedeSocial.avaliar();
-        System.out.println("=====================================");
-        Campanha campanhaEmail = new CampanhaEmail(1,2);
+
+        System.out.println("_____________________________________");
+        Campanha campanhaEmail = new CampanhaEmail(199999,27545);
         campanhaEmail.configurar();
         campanhaEmail.executar();
         campanhaEmail.avaliar();
+        System.out.println("_____________________________________");
     }
 }

@@ -1,15 +1,22 @@
-public class Main{
-    public static void main(String[] args){
-        Lista lista = new Lista(10);
-        lista.adiciona(1);
-        lista.adiciona(2);
-        lista.adiciona(3);
-        lista.adiciona(4);
-        lista.adiciona(5);
-        lista.adiciona(6);
-        lista.adiciona(7);
-        lista.adiciona(8);
-        lista.adiciona(9);
-        lista.adiciona(10);
+public class Main {
+    public static void main(String[] args) {
+        Lista scores = new Lista(10);
 
+        scores.add(new Gamer("Alice", 500));
+        scores.add(new Gamer("Bob", 300));
+        scores.add(new Gamer("Charlie", 700));
+        scores.add(new Gamer("Dave", 600));
+        scores.add(new Gamer("Eve", 400));
+
+        System.out.println("Lista de scores:");
+        scores.mostraLista();
+
+        System.out.println("\nPrimeira posição:");
+        System.out.println(scores.get(0));
+
+        scores.remove(2);
+
+        System.out.println("\nLista de scores após remover o jogador na 3ª posição:");
+        scores.mostraLista();
+    }
 }

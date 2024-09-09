@@ -11,12 +11,11 @@ public class Main {
         System.out.println("Lista de scores:");
         scores.mostraLista();
 
-        System.out.println("\nPrimeira posição:");
+        System.out.println("\nPrimeira posição=");
         System.out.println(scores.get(0));
 
         scores.remove(2);
 
-        System.out.println("\nLista de scores após remover o jogador na 3ª posição:");
         scores.mostraLista();
     }
 }

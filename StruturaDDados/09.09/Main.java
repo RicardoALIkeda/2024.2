@@ -10,9 +10,8 @@ public class Main {
 
         System.out.println("Lista de scores:");
         scores.mostraLista();
-
-        System.out.println("\nPrimeira posição=");
-        System.out.println(scores.get(0));
+        Gamer x = scores.get(0);
+        System.out.println("\nPrimeira posição = " + scores.get(0).getNome());
 
         scores.remove(2);
 

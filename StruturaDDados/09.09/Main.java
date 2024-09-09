@@ -11,7 +11,8 @@ public class Main {
         System.out.println("Lista de scores:");
         scores.mostraLista();
         Gamer x = scores.get(0);
-        System.out.println("\nPrimeira posição = " + scores.get(0).getNome());
+        System.out.println("________________________");
+        System.out.println("Primeira posição: " + scores.get(0).getNome());
 
         scores.remove(2);
 

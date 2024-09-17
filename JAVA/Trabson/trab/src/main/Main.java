@@ -1,5 +1,8 @@
 package main;
-
+/*
+Ricardo Andre Lopes Ikeda - 10390256
+Diego Estevao Lopes de Queiroz - 10419038
+ */
 import interfaces.ProcessadorTexto;
 import processadores.RemoverEspacosProcessador;
 import processadores.RemoverCaracteresEspeciaisProcessador;

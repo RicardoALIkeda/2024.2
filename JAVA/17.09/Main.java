@@ -1,3 +1,7 @@
+/*
+Ricardo Andre Lopes Ikeda - 10390256
+Diego Estevao Lopes de Queiroz - 10419038
+ */
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;

@@ -16,6 +16,7 @@ public class Main {
 
         ArrayList<Atleta> finalistas = atletas.getFinalistas(8);
         atletas.entradaManualPontuacaoFinal(finalistas);
+        finalistas.sort((a, b) -> Double.compare(b.pontuacao, a.pontuacao)); // Ordena os finalistas por pontuação decrescente
         exibirMedalhistas(finalistas);
         gravarMedalhistas(finalistas);
     }
@@ -38,6 +39,12 @@ public class Main {
 
     static void exibirMedalhistas(ArrayList<Atleta> finalistas) {
         System.out.println("Medalhistas:");
+        
+        if (finalistas.size() < 3) {
+            System.out.println("Não há atletas suficientes para atribuir todas as medalhas.");
+            return;
+        }
+
         System.out.println("Ouro: " + finalistas.get(0));
         System.out.println("Prata: " + finalistas.get(1));
         System.out.println("Bronze: " + finalistas.get(2));

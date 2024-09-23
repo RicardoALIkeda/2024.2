@@ -16,7 +16,7 @@ public class Main {
 
         ArrayList<Atleta> finalistas = atletas.getFinalistas(8);
         atletas.entradaManualPontuacaoFinal(finalistas);
-        finalistas.sort((a, b) -> Double.compare(b.pontuacao, a.pontuacao)); // Ordena os finalistas por pontuação decrescente
+        finalistas.sort((a, b) -> Double.compare(b.pontuacao, a.pontuacao)); 
         exibirMedalhistas(finalistas);
         gravarMedalhistas(finalistas);
     }

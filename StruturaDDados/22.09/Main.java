@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-
+/*Ricardo Andre Lopes Ikeda - 10390256 */
 public class Main {
     public static void main(String[] args) {
         Vetor atletas = new Vetor();
@@ -15,8 +15,7 @@ public class Main {
         }
 
         ArrayList<Atleta> finalistas = atletas.getFinalistas(8);
-        entradaManualPontuacaoFinal(finalistas);
-        finalistas.sort((a, b) -> Double.compare(b.pontuacao, a.pontuacao));
+        atletas.entradaManualPontuacaoFinal(finalistas);
         exibirMedalhistas(finalistas);
         gravarMedalhistas(finalistas);
     }
@@ -34,15 +33,6 @@ public class Main {
             scanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo não encontrado: " + e.getMessage());
-        }
-    }
-
-    static void entradaManualPontuacaoFinal(ArrayList<Atleta> finalistas) {
-        Scanner scanner = new Scanner(System.in);
-        for (Atleta atleta : finalistas) {
-            System.out.println("Digite a pontuação final para " + atleta.nome + " (" + atleta.pais + "): ");
-            double pontuacaoFinal = scanner.nextDouble();
-            atleta.pontuacao = pontuacaoFinal;
         }
     }
 

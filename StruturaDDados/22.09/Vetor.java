@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Scanner;
+/*Ricardo Andre Lopes Ikeda - 10390256 */
 
 public class Vetor {
     private ArrayList<Atleta> elementos;
@@ -56,5 +58,21 @@ public class Vetor {
         for (Atleta atleta : elementos) {
             System.out.println(atleta);
         }
+    }
+
+    public void entradaManualPontuacaoFinal(ArrayList<Atleta> finalistas) {
+        Scanner scanner = new Scanner(System.in);
+        for (Atleta atleta : finalistas) {
+            double pontuacaoFinal;
+            do {
+                System.out.println("Digite a pontuação final para " + atleta.nome + " (" + atleta.pais + ") entre 0 e 20: ");
+                pontuacaoFinal = scanner.nextDouble();
+                if (pontuacaoFinal < 0 || pontuacaoFinal > 20) {
+                    System.out.println("Pontuação inválida. Por favor, insira um valor entre 0 e 20.");
+                }
+            } while (pontuacaoFinal < 0 || pontuacaoFinal > 20);
+            atleta.pontuacao = pontuacaoFinal;
+        }
+        ordenar();
     }
 }

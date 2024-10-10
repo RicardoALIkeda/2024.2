@@ -1,10 +1,8 @@
 
-
-@FunctionalInterface
 public interface Comparator<T> {
     int compare(T o1, T o2);
 
-    // Métodos padrão e estáticos adicionais
+
     boolean equals(Object obj);
 
     default Comparator<T> reversed() {
@@ -18,6 +16,4 @@ public interface Comparator<T> {
     static <T extends Comparable<? super T>> Comparator<T> reverseOrder() {
         return (T o1, T o2) -> o2.compareTo(o1);
     }
-
-    // Outros métodos padrão e estáticos
 }

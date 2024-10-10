@@ -14,7 +14,6 @@ public class Main {
             System.out.println("2. Idade (Ordem Crescente)");
             System.out.println("3. Pontuação (Ordem Decrescente)");
             System.out.println("4. Nome (Usando Comparator)");
-            System.out.println("5. Sair");
 
             int escolha = scanner.nextInt();
             switch (escolha) {
@@ -30,8 +29,6 @@ public class Main {
                 case 4:
                     Collections.sort(atletas, new NomeComparator());
                     break;
-                case 5:
-                    System.exit(0);
                 default:
                     System.out.println("Opção inválida.");
                     continue;

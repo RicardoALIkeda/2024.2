@@ -25,7 +25,7 @@ class Simulador {
                 this.totalClientes++;
             }
 
-            int k = random.nextInt(3); // Gera um número aleatório entre 0 e 2
+            int k = random.nextInt(3);
             for (int i = 0; i < k; i++) {
                 this.fila.enfileirar(minuto);
             }

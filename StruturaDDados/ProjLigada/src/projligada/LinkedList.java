@@ -71,36 +71,32 @@ public class LinkedList {
         System.out.println("FIM DA LISTA!");
     }
     
-    
-    public void remove(Node nodeToRemove) {
+    public boolean remove(String elemento) {
+        Node atual, anterior;
+        boolean achou = false;
+        atual = header;
+        anterior = null;
+
         if (isEmpty()) {
-            return;
+            return false;
         }
-    
-        // If the node to remove is the first node
-        if (header == nodeToRemove) {
-            header = header.next;
-            if (header == null) { // If the list becomes empty
-                trailer = null;
+        if (atual.nomeAnimal.equals(elemento)) {
+            header = atual.next;
+            return true;
+        }
+
+        anterior = atual;
+        atual = atual.next;
+
+        while (atual != null) {
+            if (atual.nomeAnimal.equals(elemento)) {
+                anterior.next = atual.next;
+                return true;
             }
-            size--;
-            return;
+            anterior = atual;
+            atual = atual.next;
         }
-    
-        // Traverse the list to find the node to remove
-        Node current = header;
-        while (current.next != null && current.next != nodeToRemove) {
-            current = current.next;
-        }
-    
-        // If the node was found
-        if (current.next == nodeToRemove) {
-            current.next = nodeToRemove.next;
-            if (nodeToRemove == trailer) { // If the node to remove is the last node
-                trailer = current;
-            }
-            size--;
-        }
+
+        return false;
     }
-    
 }

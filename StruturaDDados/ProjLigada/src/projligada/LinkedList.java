@@ -73,7 +73,6 @@ public class LinkedList {
     
     public boolean remove(String elemento) {
         Node atual, anterior;
-        boolean achou = false;
         atual = header;
         anterior = null;
 

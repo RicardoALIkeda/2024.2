@@ -81,6 +81,7 @@ public class LinkedList {
         }
         if (atual.nomeAnimal.equals(elemento)) {
             header = atual.next;
+            size--;
             return true;
         }
 
@@ -90,6 +91,7 @@ public class LinkedList {
         while (atual != null) {
             if (atual.nomeAnimal.equals(elemento)) {
                 anterior.next = atual.next;
+                size--;
                 return true;
             }
             anterior = atual;

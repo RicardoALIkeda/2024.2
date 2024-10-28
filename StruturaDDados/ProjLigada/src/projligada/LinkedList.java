@@ -82,18 +82,13 @@ public class LinkedList {
             return true;
     }
     public boolean removeLast(){
-        //remove o último nó da lista
-        if (isEmpty())
+        String elemento;
+        if (isEmpty()){
             return false;
-        else {
-            Node aux = header;
-            while (aux.next != trailer)
-                aux = aux.next;
-            trailer = aux;
-            trailer.next = null;
-            size--;
-            return true;
         }
+        elemento = trailer.nomeAnimal;
+        remove(elemento);
+        return true;
     }
     
     public boolean remove(String elemento) {

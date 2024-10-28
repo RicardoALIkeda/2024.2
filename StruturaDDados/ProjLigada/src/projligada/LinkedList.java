@@ -70,6 +70,31 @@ public class LinkedList {
         }
         System.out.println("FIM DA LISTA!");
     }
+    public boolean removeFirst(){
+            if(isEmpty()){
+                return false;
+            }
+            header = header.next;
+            size--;
+            if(isEmpty()){
+                trailer = null;
+            }
+            return true;
+    }
+    public boolean removeLast(){
+        //remove o último nó da lista
+        if (isEmpty())
+            return false;
+        else {
+            Node aux = header;
+            while (aux.next != trailer)
+                aux = aux.next;
+            trailer = aux;
+            trailer.next = null;
+            size--;
+            return true;
+        }
+    }
     
     public boolean remove(String elemento) {
         Node atual, anterior;
